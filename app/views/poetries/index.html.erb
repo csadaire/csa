@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Poetries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Views</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poetries.each do |poetry| %>
+      <tr>
+        <td><%= poetry.title %></td>
+        <td><%= poetry.body %></td>
+        <td><%= poetry.views %></td>
+        <td><%= link_to 'Show', poetry %></td>
+        <td><%= link_to 'Edit', edit_poetry_path(poetry) %></td>
+        <td><%= link_to 'Destroy', poetry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poetry', new_poetry_path %>

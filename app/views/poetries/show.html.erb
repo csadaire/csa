@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @poetry.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @poetry.body %>
+</p>
+
+<p>
+  <strong>Views:</strong>
+  <%= @poetry.views %>
+</p>
+
+<%= link_to 'Edit', edit_poetry_path(@poetry) %> |
+<%= link_to 'Back', poetries_path %>
